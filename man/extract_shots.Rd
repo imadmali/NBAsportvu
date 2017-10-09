@@ -4,7 +4,7 @@
 \alias{extract_shots}
 \title{Extract Shots from SportVU Data}
 \usage{
-extract_shots(obj, pbp)
+extract_shots(obj, pbp, margin = c(3, 3))
 }
 \arguments{
 \item{obj}{A data frame returned from \code{\link[NBAsportvu]{sportvu_df}}.}
@@ -12,6 +12,10 @@ extract_shots(obj, pbp)
 \item{pbp}{Play-by_play data frame (e.g. an object returned by
 \code{\link[NBAapi]{get_pbp}}). One of the columns must contain the
 \code{PCTIMESTRING} variable.}
+
+\item{margin}{Margin around the game clock for each (shot) event. A vector of
+length two with the first element indicating how far back to go and the
+second element indicating how far forward to go (in seconds).}
 }
 \description{
 Extract all field goals from the SportVU data frame within a certain time margin of the field goal occuring.
