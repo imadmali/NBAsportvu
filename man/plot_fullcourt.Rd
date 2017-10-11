@@ -4,15 +4,18 @@
 \alias{plot_fullcourt}
 \title{Plot Full Court}
 \usage{
-plot_fullcourt(...)
+plot_fullcourt()
 }
 \value{
 A plot of the NBA regulation court.
 }
 \description{
-Plot the NBA regulation court.
+Plot the NBA regulation court. Wrapper for
+\code{\link[NBAsportvu]{fullcourt_lines}}.
 }
 \examples{
+\dontrun{
 plot_fullcourt()
+}
 
 }

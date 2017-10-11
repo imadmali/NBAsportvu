@@ -14,7 +14,7 @@
 
 extract_shots <- function(obj, pbp, margin = c(3,3)) {
   # filter field goals made/missed and free throws
-  pbp <- filter(pbp, EVENTMSGTYPE %in% 1:3)
+  pbp <- dplyr::filter(pbp, EVENTMSGTYPE %in% 1:3)
   # check if time has been converted
   if (!any(names(pbp2) == "game_clock"))
     pbp <- convert_time(pbp)

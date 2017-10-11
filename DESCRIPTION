@@ -1,17 +1,21 @@
 Package: NBAsportvu
-Title: Extract and restructure NBA player tracking data provided by SportVU.
+Title: Extract and restructure NBA player tracking data provided by SportVU
 Version: 1.0
 Authors@R: person("Imad", "Ali", email = "imad.ali@columbia.edu", role = c("aut", "cre"))
 Description: Extract and restructure NBA player tracking data provided by SportVU.
 Depends:
-  R (>= 3.4.0),
+  R (>= 3.4.0)
+Imports:
   dplyr (>= 0.7.2),
   lubridate (>= 1.6.0),
-  jsonlite (>= 1.5)
+  jsonlite (>= 1.5),
+  animation (>= 2.5),
+  graphics,
+  stats
 Suggests:
   roxygen2,
   testthat (>= 1.0.2)
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1

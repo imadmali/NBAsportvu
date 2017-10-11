@@ -2,5 +2,8 @@
 
 export(convert_time)
 export(extract_shots)
+export(fullcourt_lines)
 export(plot_fullcourt)
+export(plot_shot)
 export(sportvu_df)
+import(dplyr)

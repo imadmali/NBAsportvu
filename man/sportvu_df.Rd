@@ -25,6 +25,8 @@ due to the size of the player tracking data a single game can take a few
 minutes to convert.
 }
 \examples{
+\dontrun{
 game <- sportvu_df("~/path_to_file/0021500411.json")
+}
 
 }

@@ -15,8 +15,11 @@
 #'   of each player are denoted by \code{a*_x} and \code{a*_y}.
 #'
 #' @examples
+#' \dontrun{
 #' game <- sportvu_df("~/path_to_file/0021500411.json")
+#' }
 #'
+#' @import dplyr
 #' @export
 
 sportvu_df <- function(path) {
