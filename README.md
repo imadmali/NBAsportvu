@@ -1,5 +1,7 @@
 # NBAsportvu
 
+[![Build Status](https://travis-ci.org/imadmali/NBAsportvu.svg?branch=master)](https://travis-ci.org/imadmali/NBAsportvu)  
+
 An R package that extracts and restructures the NBA player tracking SportVU data. A half season of the data is available [here](https://github.com/rajshah4/BasketballData).
 
 Disclaimer: This R package is in no way affiliated with the NBA or SportVU.
