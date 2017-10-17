@@ -102,5 +102,24 @@ sportvu_df <- function(path) {
   colnames(full_df) <- header
 
   full_df$event_id <- as.numeric(full_df$event_id)
-  return(full_df)
+
+  # meta info
+  meta <- list(game_id = raw_game$gameid, game_date = raw_game$gamedate)
+
+  # player info
+  home <- raw_game$events$home$players[[1]]
+  visitor <- raw_game$events$visitor$players[[1]]
+  indx_home <- nrow(home)
+  indx_visitor <- nrow(visitor)
+
+  visitor$name <- raw_game$events$visitor$name[1:indx_visitor]
+  visitor$teamid <- raw_game$events$visitor$teamid[1:indx_visitor]
+  visitor$abb <- raw_game$events$visitor$abbreviation[1:indx_visitor]
+  home$name <- raw_game$events$home$name[1:indx_home]
+  home$teamid <- raw_game$events$home$teamid[1:indx_home]
+  home$abb <- raw_game$events$home$abbreviation[1:indx_home]
+
+  players <- list(visitor = visitor, home = home)
+
+  return(list(game = full_df, players = players, meta = meta))
 }
